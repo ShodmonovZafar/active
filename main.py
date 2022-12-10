@@ -60,4 +60,5 @@ class Number:
     def get_frequency(self):
         pass
 
+num = Number(123)
 
