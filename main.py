@@ -1,64 +1,31 @@
-
-class Number:
-    def __init__(self, number: int) -> None:
-        self.number = number
+class Polygon:
+    def __init__(self, height, width) -> None:
+        self.height = height
+        self.width = width
     
-    def get_number(self):
-        return self.number
-    
-    def is_even(self):
-        if self.number % 2 == 0:
-            return True
-        else:
-            return False
-    
-    def is_odd(self):
-        if self.number % 2 == 0:
-            return False
-        else:
-            return True
-    
-    def is_prime(self):
+    def getArea(self):
         pass
     
-    def get_divisors(self):
-        pass
-    
-    def get_length(self):
-        pass
-    
-    def get_sum(self):
-        pass
-    
-    def get_product(self):
-        pass
-    
-    def get_reverse(self):
-        pass
-    
-    def get_digits(self):
-        pass
-    
-    def get_max(self):
-        pass
-    
-    def get_min(self):
-        pass
-    
-    def get_average(self):
-        pass
-    
-    def get_median(self):
-        pass
-    
-    def get_mode(self):
-        pass
-    
-    def get_range(self):
-        pass
-    
-    def get_frequency(self):
+    def getPerimeter(self):
         pass
 
-num = Number(123)
+class Rectangle(Polygon):
+    def __init__(self, height, width) -> None:
+        super().__init__(height, width)
+    
+    def getArea(self):
+        return self.height * self.width
+    
+    def getPerimeter(self):
+        return 2 * (self.height + self.width)
+
+class Square(Polygon):
+    def __init__(self, width) -> None:
+        super().__init__(width, width)
+    
+    def getArea(self):
+        return self.height ** 2
+    
+    def getPerimeter(self):
+        return self.height * 4
 
